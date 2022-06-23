@@ -6,8 +6,12 @@ const userSchema = new mongoose.Schema({
     email:{ type: String, required: true, trim: true},
     password:{ type: String, required: true, trim: true},
     tc:{ type: Boolean, required: true, trim: true},
-})
+    
+} , { timestamps: true },
+)
 
 //model
 const UserModel = mongoose.model("user",userSchema);
 export default UserModel;
+
+
